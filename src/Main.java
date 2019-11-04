@@ -1,15 +1,16 @@
 import java.util.ArrayList;
 
 public class Main {
-    private static String DIRCIONARY_PATH = "data/words.txt";
-
-    private static WordStore store;
 
     public static void main(String[] args) {
-        String wordToFind = "fuck";
+        String wordToFind = "test";
+        if(args.length > 0){
+            wordToFind = args[0];
+        }
 
         System.out.println("Loading Dictionary...");
-        store = new WordStore(DIRCIONARY_PATH);
+        String DICTIONARY_PATH = "data/words.txt";
+        WordStore store = new WordStore(DICTIONARY_PATH);
         System.out.println("...complete");
 
         System.out.println("Searching dictionary for words containing \"" + wordToFind + "\"");

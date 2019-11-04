@@ -34,9 +34,9 @@ public class WordStore {
 
     /**
      * Is String a contained in String b
-     * @param a
-     * @param b
-     * @return
+     * @param a Word to find
+     * @param b Word to search
+     * @return Returns true if a is contained in b
      */
     private boolean containedIn(String a, String b){
         if(a.length() > b.length())return false;

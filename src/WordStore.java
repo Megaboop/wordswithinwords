@@ -39,15 +39,17 @@ public class WordStore {
      * @return
      */
     private boolean containedIn(String a, String b){
-        if(b.length() < a.length())return false;
+        if(a.length() > b.length())return false;
         int aInd = 0;
         int bInd = 0;
 
-        while(bInd <= b.length()){
-            if(b.charAt(bInd) == a.charAt(aInd)){
+        while(bInd < b.length()){
+            if(aInd >= a.length())return true;
+            char bChar = b.charAt(bInd);
+            char aChar = a.charAt(aInd);
+            if(bChar == aChar){
                 aInd++;
             }
-            if(aInd == a.length())return true;
             bInd++;
         }
         return false;

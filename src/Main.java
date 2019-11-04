@@ -6,7 +6,7 @@ public class Main {
     private static WordStore store;
 
     public static void main(String[] args) {
-        String wordToFind = "Test";
+        String wordToFind = "fuck";
 
         System.out.println("Loading Dictionary...");
         store = new WordStore(DIRCIONARY_PATH);
